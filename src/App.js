@@ -1,25 +1,52 @@
 import logo from './logo.svg';
+import Home from './pages/Home';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+  return(
+  <> 
+    <Header/>
+    <Footer/>
+ </>
+
+  )
 }
 
-export default App;
+function Header(){
+return(
+  
+      <Router>
+        <div className="header">
+        <a  class="logo">CRM Project</a>
+        <div className="header-right"  >
+      
+      <div >
+        <Link className="a" className="active" to="/">Home</Link></div></div>
+        
+      
+      
+      </div>
+
+
+  <Routes>
+    <Route path ="/" element={<Home/>}/> 
+        
+  </Routes>
+    
+    <br/><br/><br/>
+  </Router>
+        
+    );
+}
+
+
+
+function Footer(){
+    return(
+        <>
+            <p className="centerfooter">Copyright 2021 - Team 1 - Node</p>
+        </>
+    )
+}
+
+export default App;;
